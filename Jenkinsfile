@@ -5,7 +5,7 @@ pipeline {
   }
   environment {
      registry = "wamere/devops-pipeline"
-     registry credential = "Docker"
+     registryCredential = "Docker"
   }
   stages {
    stage ('Build') {
