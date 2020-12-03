@@ -4,8 +4,8 @@ pipeline {
       maven 'M2_home'
   }
   environment {
-     registry= "wamere/devops-pipeline"
-     registry credential= "Docker2.0ID"
+     registry = "wamere/devops-pipeline"
+     registry credential = "Docker2.0ID"
   }
   stages {
    stage ('Build') {
@@ -22,7 +22,7 @@ pipeline {
   } 
     stage ('deploy') {
     steps {
-     script
+      script {
       docker.build registry + ":$BUILD_NUMBER"
     }
   }
